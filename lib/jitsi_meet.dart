@@ -156,6 +156,15 @@ class JitsiMeet {
           if (listener.onConferenceTerminated != null)
             listener.onConferenceTerminated(message: message);
           break;
+        case "onPictureInPictureWillEnter":
+          if (listener.onPictureInPictureWillEnter != null)
+            listener.onPictureInPictureWillEnter(message: message);
+          break;
+
+        case "onPictureInPictureTerminated":
+          if (listener.onPictureInPictureTerminated != null)
+            listener.onPictureInPictureTerminated(message: message);
+          break;
       }
     });
   }
@@ -180,6 +189,15 @@ class JitsiMeet {
 
           // Remove the listener from the map of _perMeetingListeners on terminate
           _perMeetingListeners.remove(listener);
+          break;
+        case "onPictureInPictureWillEnter":
+          if (listener.onPictureInPictureWillEnter != null)
+            listener.onPictureInPictureWillEnter(message: message);
+          break;
+
+        case "onPictureInPictureTerminated":
+          if (listener.onPictureInPictureTerminated != null)
+            listener.onPictureInPictureTerminated(message: message);
           break;
       }
     }
