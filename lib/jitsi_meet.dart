@@ -133,6 +133,10 @@ class JitsiMeet {
     _channel.invokeMethod('closeMeeting');
   }
 
+  static exitPictureinPicture() {
+    _channel.invokeMethod('exitPictureinPicture');
+  }
+
   /// Adds a JitsiMeetingListener that will broadcast conference events
   static addListener(JitsiMeetingListener jitsiMeetingListener) {
     debugPrint('Jitsi Meet - addListener');

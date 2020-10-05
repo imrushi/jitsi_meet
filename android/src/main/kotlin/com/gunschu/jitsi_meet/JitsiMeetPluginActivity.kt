@@ -43,6 +43,11 @@ class JitsiMeetPluginActivity : JitsiMeetActivity() {
         }
     }
 
+    fun exitPictureinPicture(){
+        application.startActivity(Intent(this, javaClass)
+                .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+    }
+
     private val myReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent?.action) {
