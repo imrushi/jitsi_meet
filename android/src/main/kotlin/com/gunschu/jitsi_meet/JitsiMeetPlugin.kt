@@ -136,7 +136,6 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware
                 .setAudioOnly(call.argument("audioOnly") ?: false)
                 .setVideoMuted(call.argument("videoMuted") ?: false)
                 .setUserInfo(userInfo)
-                .setFeatureFlag("pip.enabled",false)
 
         // Add feature flags into options, reading given Map
         if(call.argument<HashMap<String, Boolean>?>("featureFlags") != null)
