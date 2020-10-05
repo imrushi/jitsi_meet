@@ -31,7 +31,7 @@ class JitsiMeetPluginActivity : JitsiMeetActivity() {
 
     override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration?) {
         super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
-        if (isInPictureInPictureMode){
+        if (!isInPictureInPictureMode){
            JitsiMeetEventStreamHandler.instance.onPictureInPictureWillEnter()
         }else{
            JitsiMeetEventStreamHandler.instance.onPictureInPictureTerminated()
@@ -48,7 +48,7 @@ class JitsiMeetPluginActivity : JitsiMeetActivity() {
                 .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
     }
 
-   /* private val myReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+    private val myReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent?.action) {
                 JITSI_MEETING_CLOSE -> finish()
@@ -66,7 +66,7 @@ class JitsiMeetPluginActivity : JitsiMeetActivity() {
         super.onResume()
         onStopCalled = false
         registerReceiver(myReceiver, IntentFilter(JITSI_MEETING_CLOSE))
-    }*/
+    }
 
     override fun onConferenceWillJoin(data: MutableMap<String, Any>?) {
         Log.d(JITSI_PLUGIN_TAG, String.format("JitsiMeetPluginActivity.onConferenceWillJoin: %s", data))
