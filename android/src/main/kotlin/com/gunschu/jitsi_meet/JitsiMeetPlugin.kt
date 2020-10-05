@@ -157,6 +157,9 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware
         result.success(null)
     }
 
+    fun exitPiP(){
+        JitsiMeetPluginActivity.apply { "org.jitsi.meet.CONFERENCE" }
+    }
     /**
      * ActivityAware interface implementations
      */
