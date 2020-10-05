@@ -157,7 +157,6 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware
         result.success(null)
     }
 
-
     /**
      * ActivityAware interface implementations
      */
