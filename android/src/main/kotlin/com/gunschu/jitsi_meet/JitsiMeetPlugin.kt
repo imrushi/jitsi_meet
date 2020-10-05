@@ -107,7 +107,7 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware
                     "room can not be null or empty")
             return
         }
-
+        Log.d("meeting","Joinmeeting is called");
         Log.d(JITSI_PLUGIN_TAG, "Joining Room: $room")
 
         val userInfo = JitsiMeetUserInfo()
