@@ -17,7 +17,7 @@ buildscript {
 rootProject.allprojects {
     repositories {
         maven {
-            url "file:/D:/Testvideoipandopjava/test"
+            url "https://github.com/imrushi/jitsi-custom-sdk/raw/master"
         }
         google()
         jcenter()
